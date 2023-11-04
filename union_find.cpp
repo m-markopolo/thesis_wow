@@ -1,5 +1,4 @@
 #include <Eigen/Dense>
-#include <Eigen/SparseCore>
 #include <random>
 #include <fstream>
 #include <iostream>
@@ -12,21 +11,32 @@ std::mt19937 gen(num_AEM ) ;
 
 
 
-int uf_find( int x, std::vector<int> & labels ) {
+int uf_find_double_pass( int x, std::vector<int> & labels ) {
 	int y = x ; 
 
-	int idx_count = 0 ; 
 
 	while( labels[y] != y ) // find the name of the equivalence class  
 		y = labels[y] ; 
 
-	for( idx_count = 0 ; labels[x] != x ; ++idx_count ){
+	while(labels[x] != x ){
 		int z = labels[x] ; 
 		labels[x] = y ; // remove the alias 
 		x = z ; 
 	}
 	return y ; 
 }
+
+int uf_find( int x, std::vector<int> & labels ) {
+
+	int y = x ; 
+
+	while(labels[x] != x ){
+    labels[x] = labels[labels[x]] ;
+		x = labels[x] ;
+	}
+	return y ; 
+}
+
 
 int uf_union ( int x , int y, std::vector<int> & labels ){	
  return labels[ uf_find( x, labels ) ] = uf_find( y, labels ); 
@@ -52,16 +62,8 @@ int relabel ( Eigen::MatrixXi & grid, std::vector<int> & labels, std::vector<int
 
 void bound_cond( int idx_row, int idx_col, int & left, int & up, Eigen::MatrixXi & grid ){
 
-	if ( idx_row == 0 )
-		up = 0 ;
-	else
-		up = grid( idx_row - 1, idx_col ) ; 
-
-	if ( idx_col == 0 )
-		left = 0 ;
-	else
-		left = grid( idx_row , idx_col - 1 ) ;
-
+  up = (idx_row == 0 ) ? 0 : grid(idx_row -1, idx_col ) ;
+  left = (idx_col == 0 ) ? 0 : grid(idx_row , idx_col - 1 ) ;
 
 }
 
@@ -104,14 +106,5 @@ void hk ( std::vector<int> & labels, Eigen::MatrixXi & grid ){
 void label_reset( std::vector<int> & labels ){
 	for ( int idx_fill = 0 ; idx_fill < labels.size() ; ++idx_fill )
 		labels[ idx_fill ] = idx_fill ; 
-}
-
-void write_results( std::ofstream & fp , std::vector<double> & results ){
-
-	std::string ending ; 
-	for ( int idx_write = 0 ; idx_write < results.size();  ++idx_write ){
-		ending = ( idx_write == results.size() -1 ) ? "" : "," ;
-		fp << results[idx_write] << ending ;
-	}
 }
 

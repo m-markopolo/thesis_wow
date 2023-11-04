@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-Iav = np.loadtxt("Iav.txt", delimiter =',')
-Iav_prime = np.loadtxt("Iav_prime.txt", delimiter =',')
-pmax = np.loadtxt("pmax.txt", delimiter =',')
+Iav = np.loadtxt("results/Iav.txt", delimiter =',')
+Iav_prime = np.loadtxt("results/Iav_prime.txt", delimiter =',')
+pmax = np.loadtxt("results/pmax.txt", delimiter =',')
 
 print(Iav)
 print(Iav_prime)
-p_val = [ 0.1, 0.2, 0.3, 0.4,0.5,  0.55, 0.56, 0.57, 0.58, 0.59, 0.6, 0.61, 0.62, 0.63,  0.64, 0.65, 0.7, 0.8 ] 
+p_val = [ 0.2, 0.3, 0.4, 0.5,  0.55, 0.56, 0.57, 0.585, 0.58, 0.59, 0.595, 0.6, 0.61, 0.615, 0.62, 0.625, 0.63,  0.64, 0.65, 0.7, 0.8 ] 
 
 p_close = [ 0.55, 0.56, 0.57, 0.58, 0.59, 0.6, 0.61, 0.62, 0.63,  0.64, 0.65 ]
 
@@ -28,20 +28,26 @@ p_m = np.array(p_m)
 dp_m = abs(p_m - p_c)
 dp_p = abs(p_p - p_c)
 
+'''
 #a_p, b_p = np.polyfit(np.log(dp_p), np.log(Iavp_p), 1)
 #a_p, b_p = np.polyfit(np.log(dp_p), np.log(Iav_p), 1)
-#a_p, b_p = np.polyfit(np.log(dp_p), np.log(Iav_p), 1)
-#plt.plot(np.log(dp_m), np.log(Iav_m))
-#plt.plot(np.log(dp_p), np.log(Iavp_p))
-#plt.plot(np.log(dp_p), a_p * np.log(dp_p) + b_p )
+a_p, b_p = np.polyfit(np.log(dp_p), np.log(Iav_p), 1)
+plt.plot(np.log(dp_m), np.log(Iav_m))
+plt.plot(np.log(dp_p), np.log(Iavp_p))
+plt.plot(np.log(dp_p), a_p * np.log(dp_p) + b_p )
+'''
 
-plt.plot( p_val, Iav ) 
+print(len(p_val))
+print(len(Iav))
+#plt.plot( p_val, Iav ) 
 #print(a_p, b_p)
 #print(43/18)
 
 
-#plt1 = plt.plot(p_val, Iav_prime, label='Iav_prime' ) 
-#plt2 = plt.plot(p_val, pmax, label='pmax' ) 
-#plt3 = plt.plot(p_val, Iav, label='Iav' ) 
+plt1 = plt.plot(p_val, Iav_prime, label='Iav_prime' ) 
+plt.show()
+plt2 = plt.plot(p_val, pmax, label='pmax' ) 
+plt.show()
+plt3 = plt.plot(p_val, Iav, label='Iav' ) 
 
 plt.show()
