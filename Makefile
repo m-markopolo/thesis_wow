@@ -196,6 +196,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco_DEBUG.out.dir/build.make CMakeFiles/perco_DEBUG.out.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+solver.o: solver.cpp.o
+.PHONY : solver.o
+
+# target to build an object file
+solver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco.out.dir/build.make CMakeFiles/perco.out.dir/solver.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco_DEBUG.out.dir/build.make CMakeFiles/perco_DEBUG.out.dir/solver.cpp.o
+.PHONY : solver.cpp.o
+
+solver.i: solver.cpp.i
+.PHONY : solver.i
+
+# target to preprocess a source file
+solver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco.out.dir/build.make CMakeFiles/perco.out.dir/solver.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco_DEBUG.out.dir/build.make CMakeFiles/perco_DEBUG.out.dir/solver.cpp.i
+.PHONY : solver.cpp.i
+
+solver.s: solver.cpp.s
+.PHONY : solver.s
+
+# target to generate assembly for a file
+solver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco.out.dir/build.make CMakeFiles/perco.out.dir/solver.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco_DEBUG.out.dir/build.make CMakeFiles/perco_DEBUG.out.dir/solver.cpp.s
+.PHONY : solver.cpp.s
+
 union_find.o: union_find.cpp.o
 .PHONY : union_find.o
 
@@ -239,6 +266,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... solver.o"
+	@echo "... solver.i"
+	@echo "... solver.s"
 	@echo "... union_find.o"
 	@echo "... union_find.i"
 	@echo "... union_find.s"

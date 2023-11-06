@@ -69,51 +69,61 @@ CMAKE_INSTALL_PREFIX	cmake_install.cmake	/^  set(CMAKE_INSTALL_PREFIX "\/usr\/lo
 CMAKE_INSTALL_SO_NO_EXE	cmake_install.cmake	/^  set(CMAKE_INSTALL_SO_NO_EXE "0")$/;"	v
 CMAKE_OBJDUMP	cmake_install.cmake	/^  set(CMAKE_OBJDUMP "\/usr\/bin\/objdump")$/;"	v
 CMAKE_SOURCE_DIR	Makefile	/^CMAKE_SOURCE_DIR = \/home\/user\/unpaid_programming\/thesis\/programs$/;"	m
-Cluster_data	main.cpp	/^  Cluster_data(size_t num_labels) : m_num_labels(num_labels){$/;"	f	struct:Cluster_data	file:
-Cluster_data	main.cpp	/^struct Cluster_data{$/;"	s	file:
-Cluster_results	main.cpp	/^  Cluster_results(size_t num_labels) : m_num_labels(num_labels){$/;"	f	struct:Cluster_results	file:
-Cluster_results	main.cpp	/^struct Cluster_results {$/;"	s	file:
 EQUALS	Makefile	/^EQUALS = =$/;"	m
-Iav	main.cpp	/^  std::vector<double>	Iav ;$/;"	m	struct:Cluster_results	typeref:typename:std::vector<double>	file:
-Iav_prime	main.cpp	/^  std::vector<double>	Iav_prime ;$/;"	m	struct:Cluster_results	typeref:typename:std::vector<double>	file:
+GRID_OPERATIONS_HPP	grid_operations.hpp	/^#define GRID_OPERATIONS_HPP$/;"	d
+Iav	solver.hpp	/^  std::vector<double>	Iav ;$/;"	m	class:Solver	typeref:typename:std::vector<double>
+Iav_prime	solver.hpp	/^  std::vector<double>	Iav_prime ;$/;"	m	class:Solver	typeref:typename:std::vector<double>
 RM	Makefile	/^RM = \/usr\/bin\/cmake -E rm -f$/;"	m
 SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
+SOLVER_HPP	solver.hpp	/^#define SOLVER_HPP$/;"	d
+Solver	solver.cpp	/^Solver::Solver(size_t grid_size, int num_rep ) : uf(grid_size) ,grid_size(grid_size), num_rep(nu/;"	f	class:Solver
+Solver	solver.hpp	/^class Solver{$/;"	c
+UNION_FIND_HPP	union_find.hpp	/^#define UNION_FIND_HPP$/;"	d
+Union_find	union_find.hpp	/^  Union_find(size_t grid_size) : gen(num_AEM ) {$/;"	f	class:Union_find
+Union_find	union_find.hpp	/^class Union_find{$/;"	c
 all	Makefile	/^all: cmake_check_build_system$/;"	t
-bound_cond	union_find.cpp	/^void bound_cond( int idx_row, int idx_col, int & left, int & up, Eigen::MatrixXi & grid ){$/;"	f	typeref:typename:void
+bound_cond	union_find.cpp	/^void Union_find::bound_cond( int idx_row, int idx_col, int & left, int & up  ){$/;"	f	class:Union_find	typeref:typename:void
 clean	Makefile	/^clean:$/;"	t
 clean/fast	Makefile	/^clean\/fast: clean$/;"	t
+clear_sizes	union_find.hpp	/^  void clear_sizes(){$/;"	f	class:Union_find	typeref:typename:void
+cluster_sizes	union_find.hpp	/^  std::vector<int> cluster_sizes() const {$/;"	f	class:Union_find	typeref:typename:std::vector<int>
 cmake_check_build_system	Makefile	/^cmake_check_build_system:$/;"	t
 cmake_force	Makefile	/^cmake_force:$/;"	t
-create_2Dgrid	grid_operations.cpp	/^void create_2Dgrid( Eigen::MatrixXi & grid, double prob_trap ) {$/;"	f	typeref:typename:void
+create_2Dgrid	union_find.cpp	/^void Union_find::create_2Dgrid( double prob_trap ){$/;"	f	class:Union_find	typeref:typename:void
 default_target	Makefile	/^default_target: all$/;"	t
 depend	Makefile	/^depend:$/;"	t
 edit_cache	Makefile	/^edit_cache:$/;"	t
 edit_cache/fast	Makefile	/^edit_cache\/fast: edit_cache$/;"	t
-get_probabilities	main.cpp	/^std::vector<double> get_probabilities(){$/;"	f	typeref:typename:std::vector<double>
-get_results	main.cpp	/^  void get_results(size_t grid_size, size_t num_rep ){$/;"	f	typeref:typename:void
+gen	union_find.hpp	/^  std::mt19937 gen ;$/;"	m	class:Union_find	typeref:typename:std::mt19937
+get_prob_from_file	solver.cpp	/^std::vector<double> get_prob_from_file(){$/;"	f	typeref:typename:std::vector<double>
+get_results	solver.cpp	/^void Solver::get_results(){$/;"	f	class:Solver	typeref:typename:void
 grid_operations.cpp.i	Makefile	/^grid_operations.cpp.i:$/;"	t
 grid_operations.cpp.o	Makefile	/^grid_operations.cpp.o:$/;"	t
 grid_operations.cpp.s	Makefile	/^grid_operations.cpp.s:$/;"	t
 grid_operations.i	Makefile	/^grid_operations.i: grid_operations.cpp.i$/;"	t
 grid_operations.o	Makefile	/^grid_operations.o: grid_operations.cpp.o$/;"	t
 grid_operations.s	Makefile	/^grid_operations.s: grid_operations.cpp.s$/;"	t
+grid_size	solver.hpp	/^  size_t grid_size  = 0;$/;"	m	class:Solver	typeref:typename:size_t
 help	Makefile	/^help:$/;"	t
-hk	union_find.cpp	/^void hk ( std::vector<int> & labels, Eigen::MatrixXi & grid ){$/;"	f	typeref:typename:void
+hk	union_find.cpp	/^void Union_find::hk (){$/;"	f	class:Union_find	typeref:typename:void
 is_element_to_be_removed	grid_operations.cpp	/^bool is_element_to_be_removed( int grid_element, double p_diff ){$/;"	f	typeref:typename:bool
-label_reset	union_find.cpp	/^void label_reset( std::vector<int> & labels ){$/;"	f	typeref:typename:void
-labels	main.cpp	/^  std::vector<int> labels ;$/;"	m	struct:Cluster_data	typeref:typename:std::vector<int>	file:
-m_num_labels	main.cpp	/^  size_t m_num_labels ;$/;"	m	struct:Cluster_data	typeref:typename:size_t	file:
-m_num_labels	main.cpp	/^  size_t m_num_labels ;$/;"	m	struct:Cluster_results	typeref:typename:size_t	file:
-main	main.cpp	/^  int main(){$/;"	f	typeref:typename:int
+m_clust_size	union_find.hpp	/^  std::vector<int> m_clust_size ;$/;"	m	class:Union_find	typeref:typename:std::vector<int>
+m_grid	union_find.hpp	/^  Eigen::MatrixXi m_grid ;$/;"	m	class:Union_find	typeref:typename:Eigen::MatrixXi
+m_labels	union_find.hpp	/^  std::vector<int> m_labels ;$/;"	m	class:Union_find	typeref:typename:std::vector<int>
+m_num_1	solver.hpp	/^  double m_num_1 ;$/;"	m	class:Solver	typeref:typename:double
+m_results_dir	solver.hpp	/^  std::string  m_results_dir = {} ;$/;"	m	class:Solver	typeref:typename:std::string
+main	main.cpp	/^int main(){$/;"	f	typeref:typename:int
 main.cpp.i	Makefile	/^main.cpp.i:$/;"	t
 main.cpp.o	Makefile	/^main.cpp.o:$/;"	t
 main.cpp.s	Makefile	/^main.cpp.s:$/;"	t
 main.i	Makefile	/^main.i: main.cpp.i$/;"	t
 main.o	Makefile	/^main.o: main.cpp.o$/;"	t
 main.s	Makefile	/^main.s: main.cpp.s$/;"	t
-max_cluster_size	main.cpp	/^  size_t max_cluster_size = 0 ;$/;"	m	struct:Cluster_data	typeref:typename:size_t	file:
-modify_2Dgrid	grid_operations.cpp	/^void modify_2Dgrid( Eigen::MatrixXi & grid, double prob_trap_old, double prob_trap_new ) {$/;"	f	typeref:typename:void
-num_AEM	union_find.cpp	/^int num_AEM = 4418;  $/;"	v	typeref:typename:int
+max_cluster_size	solver.hpp	/^  size_t max_cluster_size = 0 ;$/;"	m	class:Solver	typeref:typename:size_t
+modify_2Dgrid	grid_operations.cpp	/^  void modify_2Dgrid( Eigen::MatrixXi & grid, double prob_trap_old, double prob_trap_new ) {$/;"	f	typeref:typename:void
+num_AEM	union_find.hpp	/^  int num_AEM = 4418;  $/;"	m	class:Union_find	typeref:typename:int
+num_rep	solver.hpp	/^  int num_rep = 0 ; $/;"	m	class:Solver	typeref:typename:int
+p_val	solver.hpp	/^  std::vector <double> p_val ;$/;"	m	class:Solver	typeref:typename:std::vector<double>
 perco.out	CMakeLists.txt	/^add_executable(perco.out$/;"	t
 perco.out	CMakeLists.txt	/^project(perco.out $/;"	p
 perco.out	Makefile	/^perco.out: cmake_check_build_system$/;"	t
@@ -122,21 +132,30 @@ perco_DEBUG.out	CMakeLists.txt	/^add_executable(perco_DEBUG.out$/;"	t
 perco_DEBUG.out	CMakeLists.txt	/^project(perco_DEBUG.out $/;"	p
 perco_DEBUG.out	Makefile	/^perco_DEBUG.out: cmake_check_build_system$/;"	t
 perco_DEBUG.out/fast	Makefile	/^perco_DEBUG.out\/fast:$/;"	t
-pmax	main.cpp	/^  std::vector<double>	pmax ;$/;"	m	struct:Cluster_results	typeref:typename:std::vector<double>	file:
+pmax	solver.hpp	/^  std::vector<double>	pmax ;$/;"	m	class:Solver	typeref:typename:std::vector<double>
 preinstall	Makefile	/^preinstall: all$/;"	t
 preinstall/fast	Makefile	/^preinstall\/fast:$/;"	t
 rebuild_cache	Makefile	/^rebuild_cache:$/;"	t
 rebuild_cache/fast	Makefile	/^rebuild_cache\/fast: rebuild_cache$/;"	t
-relabel	union_find.cpp	/^int relabel ( Eigen::MatrixXi & grid, std::vector<int> & labels, std::vector<int> & clust_size  /;"	f	typeref:typename:int
-sizes	main.cpp	/^  std::vector<int> sizes;$/;"	m	struct:Cluster_data	typeref:typename:std::vector<int>	file:
-uf_find	union_find.cpp	/^int uf_find( int x, std::vector<int> & labels ) {$/;"	f	typeref:typename:int
-uf_find_double_pass	union_find.cpp	/^int uf_find_double_pass( int x, std::vector<int> & labels ) {$/;"	f	typeref:typename:int
-uf_union	union_find.cpp	/^int uf_union ( int x , int y, std::vector<int> & labels ){	$/;"	f	typeref:typename:int
+regenerate_2Dgrid	grid_operations.cpp	/^void regenerate_2Dgrid( Eigen::MatrixXi & grid, double prob_trap ) {$/;"	f	typeref:typename:void
+relabel_and_get_max_cluster_size	union_find.cpp	/^int Union_find::relabel_and_get_max_cluster_size(){$/;"	f	class:Union_find	typeref:typename:int
+replace_nodes_until_new_prob_is_reached	union_find.cpp	/^void Union_find::replace_nodes_until_new_prob_is_reached( double prob_trap_old, double prob_trap/;"	f	class:Union_find	typeref:typename:void
+set_results_directory	solver.cpp	/^void Solver::set_results_directory(std::string const & results_directory ){$/;"	f	class:Solver	typeref:typename:void
+solver.cpp.i	Makefile	/^solver.cpp.i:$/;"	t
+solver.cpp.o	Makefile	/^solver.cpp.o:$/;"	t
+solver.cpp.s	Makefile	/^solver.cpp.s:$/;"	t
+solver.i	Makefile	/^solver.i: solver.cpp.i$/;"	t
+solver.o	Makefile	/^solver.o: solver.cpp.o$/;"	t
+solver.s	Makefile	/^solver.s: solver.cpp.s$/;"	t
+uf	solver.hpp	/^  Union_find uf ;$/;"	m	class:Solver	typeref:typename:Union_find
+uf_find	union_find.cpp	/^int Union_find::uf_find( int x ) {$/;"	f	class:Union_find	typeref:typename:int
+uf_union	union_find.cpp	/^int Union_find::uf_union ( int x , int y ){	$/;"	f	class:Union_find	typeref:typename:int
 union_find.cpp.i	Makefile	/^union_find.cpp.i:$/;"	t
 union_find.cpp.o	Makefile	/^union_find.cpp.o:$/;"	t
 union_find.cpp.s	Makefile	/^union_find.cpp.s:$/;"	t
 union_find.i	Makefile	/^union_find.i: union_find.cpp.i$/;"	t
 union_find.o	Makefile	/^union_find.o: union_find.cpp.o$/;"	t
 union_find.s	Makefile	/^union_find.s: union_find.cpp.s$/;"	t
-update_results	main.cpp	/^Cluster_results update_results( Cluster_data const & clust_data, Cluster_results & results,$/;"	f	typeref:typename:Cluster_results
-write_results	main.cpp	/^void write_results( std::string filename , std::vector<double> const & results ){$/;"	f	typeref:typename:void
+update_results	solver.cpp	/^void Solver::update_results( size_t idx_prob ){$/;"	f	class:Solver	typeref:typename:void
+write_results	solver.cpp	/^void write_results( std::string const & filename , std::vector<double> const & results ){$/;"	f	typeref:typename:void
+~Solver	solver.cpp	/^Solver::~Solver(){$/;"	f	class:Solver

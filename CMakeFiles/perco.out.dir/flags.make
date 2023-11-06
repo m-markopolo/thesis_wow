@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/usr/include/eigen3
 
-CXX_FLAGS = -Ofast -march=native -Wall -Wextra -Wpedantic
+CXX_FLAGS = -Ofast -march=native -mtune=native -Wall -Wextra -Wpedantic
 

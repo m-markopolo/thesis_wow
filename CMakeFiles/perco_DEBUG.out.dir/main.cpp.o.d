@@ -386,56 +386,15 @@ CMakeFiles/perco_DEBUG.out.dir/main.cpp.o: \
  /usr/include/eigen3/Eigen/src/Eigenvalues/./RealQZ.h \
  /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
  /home/user/unpaid_programming/thesis/programs/union_find.hpp \
- /usr/include/eigen3/Eigen/SparseCore /usr/include/c++/13.2.1/map \
- /usr/include/c++/13.2.1/bits/stl_tree.h \
- /usr/include/c++/13.2.1/bits/stl_map.h \
- /usr/include/c++/13.2.1/bits/stl_multimap.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
- /usr/include/eigen3/Eigen/src/SparseCore/../plugins/CommonCwiseUnaryOps.h \
- /usr/include/eigen3/Eigen/src/SparseCore/../plugins/CommonCwiseBinaryOps.h \
- /usr/include/eigen3/Eigen/src/SparseCore/../plugins/MatrixCwiseUnaryOps.h \
- /usr/include/eigen3/Eigen/src/SparseCore/../plugins/MatrixCwiseBinaryOps.h \
- /usr/include/eigen3/Eigen/src/SparseCore/../plugins/BlockMethods.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
- /usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
- /usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
- /usr/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseView.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
- /usr/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
- /usr/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
- /usr/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
  /usr/include/c++/13.2.1/random /usr/include/c++/13.2.1/bits/random.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/opt_random.h \
  /usr/include/c++/13.2.1/bits/random.tcc /usr/include/c++/13.2.1/numeric \
  /usr/include/c++/13.2.1/bits/stl_numeric.h \
  /usr/include/c++/13.2.1/pstl/glue_numeric_defs.h \
- /usr/include/c++/13.2.1/fstream /usr/include/c++/13.2.1/bits/codecvt.h \
- /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/13.2.1/bits/fstream.tcc \
- /usr/include/c++/13.2.1/iostream /usr/include/unistd.h \
- /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
- /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
- /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/omp.h
+ /home/user/unpaid_programming/thesis/programs/solver.hpp \
+ /usr/include/bits/getopt_core.h /usr/include/c++/13.2.1/iostream \
+ /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+ /usr/include/bits/environments.h /usr/include/bits/confname.h \
+ /usr/include/bits/getopt_posix.h /usr/include/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h /usr/include/getopt.h \
+ /usr/include/bits/getopt_ext.h

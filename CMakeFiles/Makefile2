@@ -83,12 +83,12 @@ clean: CMakeFiles/perco_DEBUG.out.dir/clean
 CMakeFiles/perco.out.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco.out.dir/build.make CMakeFiles/perco.out.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco.out.dir/build.make CMakeFiles/perco.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/user/unpaid_programming/thesis/programs/CMakeFiles --progress-num=1,2,3,4 "Built target perco.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/user/unpaid_programming/thesis/programs/CMakeFiles --progress-num=1,2,3,4,5 "Built target perco.out"
 .PHONY : CMakeFiles/perco.out.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/perco.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/unpaid_programming/thesis/programs/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/unpaid_programming/thesis/programs/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/perco.out.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/unpaid_programming/thesis/programs/CMakeFiles 0
 .PHONY : CMakeFiles/perco.out.dir/rule
@@ -109,12 +109,12 @@ CMakeFiles/perco.out.dir/clean:
 CMakeFiles/perco_DEBUG.out.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco_DEBUG.out.dir/build.make CMakeFiles/perco_DEBUG.out.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perco_DEBUG.out.dir/build.make CMakeFiles/perco_DEBUG.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/user/unpaid_programming/thesis/programs/CMakeFiles --progress-num=5,6,7,8 "Built target perco_DEBUG.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/user/unpaid_programming/thesis/programs/CMakeFiles --progress-num=6,7,8,9,10 "Built target perco_DEBUG.out"
 .PHONY : CMakeFiles/perco_DEBUG.out.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/perco_DEBUG.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/unpaid_programming/thesis/programs/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/unpaid_programming/thesis/programs/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/perco_DEBUG.out.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/unpaid_programming/thesis/programs/CMakeFiles 0
 .PHONY : CMakeFiles/perco_DEBUG.out.dir/rule

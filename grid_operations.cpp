@@ -6,7 +6,8 @@
 #include <algorithm>
 #include "grid_operations.hpp"
 
-void create_2Dgrid( Eigen::MatrixXi & grid, double prob_trap ) {
+
+void regenerate_2Dgrid( Eigen::MatrixXi & grid, double prob_trap ) {
 
   int flag_trap = 1 ; 
 
@@ -28,33 +29,40 @@ bool is_element_to_be_removed( int grid_element, double p_diff ){
 
   if(p_diff > 0 ){
     return grid_element == 0 ;
-  }else {
+  }else{
     return grid_element != 0 ;
   }
 }
-void modify_2Dgrid( Eigen::MatrixXi & grid, double prob_trap_old, double prob_trap_new ) {
+
+  void modify_2Dgrid( Eigen::MatrixXi & grid, double prob_trap_old, double prob_trap_new ) {
 
 
-  double p_diff = ( prob_trap_new - prob_trap_old ) ; 
+    double p_diff = ( prob_trap_new - prob_trap_old ) ; 
 
-  std::mt19937 gen(1234) ;
-  std::uniform_int_distribution <> distrib( 0, grid.rows() - 1 ) ; 
-
-
-  int replacement = (p_diff > 0 ) ? 1 : 0 ; // Replace 0 with 1 to increase occupied states and vice versa to decrease occupied states
-
-  for( size_t idx_rep = 0 ; idx_rep < std::abs(p_diff) * grid.size()  ;  ){
+    std::mt19937 gen(1234) ;
+    std::uniform_int_distribution <> distrib( 0, grid.rows() - 1 ) ; 
 
 
-    size_t rnd_row = distrib(gen) ;
-    size_t rnd_col = distrib(gen) ;
+//    size_t non_zero = grid.size() - std::count(grid.data(), grid.data() + grid.size(), 0  ) ;
 
-    if( is_element_to_be_removed( grid(rnd_row, rnd_col), p_diff ) == true ){
+    int replacement = (p_diff > 0 ) ? 1 : 0 ; // Replace 0 with 1 to increase occupied states and vice versa to decrease occupied states
 
-      grid(rnd_row, rnd_col ) =  replacement ;
-      ++idx_rep ;
+    if (p_diff != 0.0 ) {
+      for( size_t idx_rep = 0 ; idx_rep < static_cast<size_t>(std::abs(p_diff) * grid.size()  )  ;  ){
 
+
+        size_t rnd_row = distrib(gen) ;
+        size_t rnd_col = distrib(gen) ;
+
+
+
+        if( is_element_to_be_removed( grid(rnd_row, rnd_col), p_diff ) == true ){
+
+          grid(rnd_row, rnd_col ) =  replacement ;
+          ++idx_rep ;
+
+        }
+      }
     }
   }
-}
 

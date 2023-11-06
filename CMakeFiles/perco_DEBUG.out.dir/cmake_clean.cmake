@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/perco_DEBUG.out.dir/grid_operations.cpp.o.d"
   "CMakeFiles/perco_DEBUG.out.dir/main.cpp.o"
   "CMakeFiles/perco_DEBUG.out.dir/main.cpp.o.d"
+  "CMakeFiles/perco_DEBUG.out.dir/solver.cpp.o"
+  "CMakeFiles/perco_DEBUG.out.dir/solver.cpp.o.d"
   "CMakeFiles/perco_DEBUG.out.dir/union_find.cpp.o"
   "CMakeFiles/perco_DEBUG.out.dir/union_find.cpp.o.d"
   "perco_DEBUG.out"

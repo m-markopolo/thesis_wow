@@ -9,6 +9,7 @@ add_executable(perco.out
   grid_operations.cpp
   main.cpp
   union_find.cpp
+  solver.cpp
 )
 
 target_compile_features(perco.out
@@ -20,6 +21,7 @@ target_compile_options(perco.out
 PRIVATE
 -Ofast
 -march=native
+-mtune=native
 -Wall
 -Wextra
 -Wpedantic
@@ -39,6 +41,7 @@ add_executable(perco_DEBUG.out
   grid_operations.cpp
   main.cpp
   union_find.cpp
+  solver.cpp
 )
 
 target_compile_features(perco_DEBUG.out
