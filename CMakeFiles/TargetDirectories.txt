@@ -1,4 +1,6 @@
-/home/user/unpaid_programming/thesis/programs/CMakeFiles/perco.out.dir
-/home/user/unpaid_programming/thesis/programs/CMakeFiles/perco_DEBUG.out.dir
-/home/user/unpaid_programming/thesis/programs/CMakeFiles/edit_cache.dir
-/home/user/unpaid_programming/thesis/programs/CMakeFiles/rebuild_cache.dir
+/home/user/UNION_FIND/CMakeFiles/perco.out.dir
+/home/user/UNION_FIND/CMakeFiles/perco_DEBUG.out.dir
+/home/user/UNION_FIND/CMakeFiles/manual_checks.dir
+/home/user/UNION_FIND/CMakeFiles/auto_tests.dir
+/home/user/UNION_FIND/CMakeFiles/edit_cache.dir
+/home/user/UNION_FIND/CMakeFiles/rebuild_cache.dir

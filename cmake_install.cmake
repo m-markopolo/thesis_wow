@@ -1,4 +1,4 @@
-# Install script for directory: /home/user/unpaid_programming/thesis/programs
+# Install script for directory: /home/user/UNION_FIND
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/user/unpaid_programming/thesis/programs/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/user/UNION_FIND/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

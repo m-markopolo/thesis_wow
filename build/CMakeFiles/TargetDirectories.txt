@@ -1,0 +1,5 @@
+/home/user/unpaid_programming/thesis/programs/CMakeFiles/perco.out.dir
+/home/user/unpaid_programming/thesis/programs/CMakeFiles/perco_DEBUG.out.dir
+/home/user/unpaid_programming/thesis/programs/CMakeFiles/grid_ops.t.out.dir
+/home/user/unpaid_programming/thesis/programs/CMakeFiles/edit_cache.dir
+/home/user/unpaid_programming/thesis/programs/CMakeFiles/rebuild_cache.dir
