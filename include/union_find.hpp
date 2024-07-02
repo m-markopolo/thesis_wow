@@ -10,7 +10,7 @@ class Union_find{
 
 private:
 
-  int num_AEM = 4418;  
+  int num_AEM = 44184418;  
   std::mt19937 gen ;
 
   std::vector<int> m_labels ;
