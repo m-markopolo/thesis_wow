@@ -25,7 +25,7 @@ Union_find::Union_find(size_t grid_size) : gen(num_AEM ) {
 
     std::iota(m_labels.begin(), m_labels.end(), 0 ) ;
 
-    m_grid = Eigen::MatrixXi{grid_size, grid_size} ;
+    m_grid = Eigen::MatrixXi(grid_size, grid_size) ;
 
   }
 

@@ -8,6 +8,9 @@
 #include <getopt.h>
 
 
+int get_closest_odd_num_including_self(int n){
+  return (n%2) ? n +1  : n ; 
+}
 
 int main(int argc, char ** argv){
 
@@ -36,12 +39,12 @@ int main(int argc, char ** argv){
       }
     }
   }
-  grid_size = ceil(grid_size) ;
+  grid_size = get_closest_odd_num_including_self(grid_size) ;
 
 
   Solver solve(grid_size, num_rep) ;
   solve.set_results_directory("results") ;
 
-  for (size_t idx_rep = 0 ; idx_rep < num_rep ; ++idx_rep )
+  for (int idx_rep = 0 ; idx_rep < num_rep ; ++idx_rep )
     solve.get_results() ;
 }
