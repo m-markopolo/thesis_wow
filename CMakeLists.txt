@@ -10,6 +10,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(perco.out
   ./src/grid_operations.cpp
+  ./src/dist_fun.cpp
   ./src/main.cpp
   ./src/union_find.cpp
   ./src/solver.cpp
@@ -22,6 +23,7 @@ cxx_std_17
 target_compile_options(perco.out
 PRIVATE
 -Ofast
+-fopenmp
 -march=native
 -mtune=native
 -Wall
@@ -42,6 +44,7 @@ PRIVATE
 
   add_executable(perco_DEBUG.out
     ./src/grid_operations.cpp
+    ./src/dist_fun.cpp
     ./src/main.cpp
    ./src/union_find.cpp
    ./src/solver.cpp
@@ -79,6 +82,7 @@ PRIVATE
 
   add_executable( ${EXEC_NAME}
     ./src/grid_operations.cpp
+    ./src/dist_fun.cpp
     ./src/manual_checks.cpp
   )
 
@@ -113,6 +117,7 @@ set(EXEC_NAME auto_tests )
 find_package(Catch2 3 REQUIRED)
 add_executable( ${EXEC_NAME}
   ./src/grid_operations.cpp
+    ./src/dist_fun.cpp
   ./unit_tests/grid_operations.t.cpp
   ./src/union_find.cpp
 )
