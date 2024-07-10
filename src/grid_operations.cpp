@@ -7,6 +7,7 @@
 #include <chrono>
 #include "grid_operations.hpp"
 #include "stats.hpp"
+#include "dist_fun.hpp"
 
 
 namespace{
@@ -97,7 +98,7 @@ void modify_2Dgrid_using_custom_function( Eigen::MatrixXi & grid, double prob_tr
   static int counter = 0 ; 
   ++counter ;
   std::cout << counter << '\n' ;
-  if(counter == 89999){
+  if(counter == NUM_REP * GRID_SIZE ){
   std::cout << "observed_replacements \n" << observed_replacements << '\n' ;
   }
 #endif
@@ -105,9 +106,9 @@ void modify_2Dgrid_using_custom_function( Eigen::MatrixXi & grid, double prob_tr
 
 void modify_2Dgrid( Eigen::MatrixXi & grid, double prob_trap_old, double prob_trap_new ) {
 
-  auto dist_fun = [](double x ){return stats::pexp(x, 5, false) ; }  ;
+
   static Eigen::MatrixXd dist_table = get_distance_lookup_table(grid.rows(), dist_fun ); 
-  [[maybe_unused]] static bool do_once = [&](){ std::cout << dist_table << std::endl ; return 1 ; }();
+  // [[maybe_unused]] static bool do_once = [&](){ std::cout << dist_table << std::endl ; return 1 ; }();
   std::default_random_engine gen(std::chrono::system_clock::now().time_since_epoch().count())  ;
   std::uniform_real_distribution<> dist ; 
 
